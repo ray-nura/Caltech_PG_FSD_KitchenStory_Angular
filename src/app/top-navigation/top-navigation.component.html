@@ -1,0 +1,28 @@
+<nav class="navbar  bg-info navbar-dark ">
+  <ul class="nav nav-pills flex-column">
+    <li class="nav-item">
+      <a class="navbar-brand" routerLink="/">Kitchen Story</a>
+    </li>
+    <li *ngIf="emailVerified" class="nav-item">
+      <a class="navbar-brand" routerLink="/"> Name: {{user}}</a>
+    </li>
+    <li class="nav-item">
+      <a class="navbar-brand" routerLink="/shopping-cart">Shopping Cart</a>
+    </li>
+    <li class="nav-item">
+      <a class="navbar-brand" routerLink="/check-out">Check-out</a>
+    </li>
+    <li *ngIf="!emailVerified" class="nav-item">
+      <a class="navbar-brand" routerLink="/login">Login</a>
+    </li>
+
+    <li *ngIf="emailVerified" class="nav-item">
+      <a class="navbar-brand" routerLink="/food-item">Add new Products</a>
+    </li>
+    <li *ngIf="emailVerified" class="nav-item">
+      <a class="navbar-brand" (click)="Logout()" routerLink="">Logout</a>
+    </li>
+  </ul>
+  <input class="form-control m-3" type="text" placeholder="Search" aria-label="Search">
+  <button class="btn btn-outline-info bg-light" type="submit">Search</button>
+</nav>

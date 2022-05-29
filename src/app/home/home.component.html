@@ -1,0 +1,14 @@
+<div class="row flex">
+  <ng-container *ngFor="let afooditem of fooditems; let i=index">
+    <div class="card" style="width: 15rem; min-height: 20rem;">
+      <img class="card-img-top" [src]="afooditem.imageUrl" alt="Card image cap" style="width: 15rem;">
+      <div class="card-body">
+        <h5 class="card-title">{{afooditem.title}}</h5>
+        <p class="card-text">{{afooditem.price | currency:'USD':true}}</p>
+      </div>
+      <div class="card-footer">
+        <button (click)="addToCart(afooditem)" class="btn btn-info">Add to Cart</button>
+      </div>
+    </div>
+  </ng-container>
+</div>

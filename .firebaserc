@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "auth-shop-96d96": {
+      "hosting": {
+        "auth-shop": [
+          "auth-shop-96d96"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+<div class="h1">
+  Thank you so much for your continuous support and for being our customer.<br /><br />
+  Your order has been confirmed and it will arrive soon!
+
+  <p *ngFor="let afooditem of cartitems; let i = index ">
+    {{ removeAllCartItems(afooditem, i) }}
+  </p>
+</div>

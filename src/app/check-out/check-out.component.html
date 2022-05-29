@@ -1,0 +1,24 @@
+<div class="cartItemtable">
+    <table class="table">
+        <tr>
+            <th>Title</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total</th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr *ngFor="let afooditem of cartitems; let i = index ">
+            <td> {{ afooditem.title }} </td>
+            <td> {{ afooditem.price }} </td>
+            <td> {{ afooditem.quantity }} </td>
+            <td> {{ afooditem.total }} </td>
+            {{ locationsSum(afooditem.total, i) }}
+        </tr>
+    </table>
+</div>
+
+<div>
+    <p class="h3"> Total Amount : {{totalAmount| currency:'USD' :true }}</p>
+    <button class="btn btn-info my-2 my-sm-0" routerLink="/order-success"> Pay & Checkout</button>
+</div>
